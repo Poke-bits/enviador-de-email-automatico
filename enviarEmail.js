@@ -1,4 +1,5 @@
 import nodemailer from 'nodemailer'
+import obj from './senhas.js'
 
 // usa o nodemailer para enviar emaiis.
 export async function enviarEmail(para,assunto, descricao) {
@@ -8,8 +9,8 @@ export async function enviarEmail(para,assunto, descricao) {
         port: 587,
         secure: false,
         auth: {
-            user: "fabio.thompson44@outlook.com",
-            pass: "32920097f"
+            user: obj.user,
+            pass: obj.pass
         }
     })
     //evnia o email
